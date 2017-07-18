@@ -2,9 +2,11 @@
   "mysqlds": {
     "host": "localhost",
     "port": 3306,
-    "url": "mysql://root:senha123@localhost/mylibrary_db",
+    // change user/password
+    "url": "mysql://user:password@localhost/mylibrary_db",
     "database": "mylibrary_db",
-    "password": "senha123",
+    // change user/password
+    "password": "password",
     "name": "mysqlds",
     "user": "root",
     "connector": "mysql"

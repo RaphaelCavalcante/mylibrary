@@ -1,4 +1,4 @@
-angular.module('myLibrary',['ngRoute', 'lbServices', 'addBook','searchBook','editBook'])
+angular.module('myLibrary',['ngRoute', 'lbServices', 'addBook','searchBook','editBook', 'detailBook'])
 .config(['$locationProvider','$routeProvider',
  function($locationProvider, $routeProvider,$stateProvider){
     $routeProvider.when('/home',{
@@ -15,9 +15,7 @@ angular.module('myLibrary',['ngRoute', 'lbServices', 'addBook','searchBook','edi
         params:{id:0}
     }).when('/book-detail/:id',{
         templateUrl:'views/book-detail.html',
-        controller:'BookDetailController',
+        controller:'detailBookController',
         params:{id:0}
-    }).otherwise('/',{
-        templateUrl:"/views/welcome.html"
-    });
+    }).otherwise({redirectTo:'/home'});
  }]);

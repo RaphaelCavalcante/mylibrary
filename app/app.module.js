@@ -4,5 +4,6 @@ angular.module('myLibrary',
     'lbServices',
     'addBook',
     'searchBook',
-    'editBook'
+    'editBook',
+    'detailBook'
 ]);

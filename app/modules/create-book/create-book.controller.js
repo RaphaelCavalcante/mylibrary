@@ -3,15 +3,12 @@ controller('addNewBook', ['$scope','$routeParams', 'Book','$window',
 function($scope, $routeParams,Book, $window){
     $scope.state="create";
     $scope.addBook= function($data){
-        console.log($data.title);
-        console.log($data.author);
-        console.log($data.desc);
         Book.create({
-            author:$data.title,
-            title:$data.author,
-            description:$data.desc
+            title:$data.title,
+            author:$data.author,
+            description:$data.description
         }).$promise.then(function(){
-            $window.location.href="/";
+            $window.location.href="/search-book";
         });
     };
 }]);
