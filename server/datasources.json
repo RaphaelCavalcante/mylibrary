@@ -1,0 +1,12 @@
+{
+  "mysqlds": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "mysql://root:senha123@localhost/mylibrary_db",
+    "database": "mylibrary_db",
+    "password": "senha123",
+    "name": "mysqlds",
+    "user": "root",
+    "connector": "mysql"
+  }
+}

@@ -1,0 +1,52 @@
+<div>
+    <label> SEARCH BOOK </label>
+    <form novalidate class="simple-form">
+        <input class="form-control" type="text" ng-model="data" />
+        <div>
+            <select class="input-sm" name= "searchBy" ng-model="opt">
+                <option value=""> filter </option>
+                <option value="byTitle"> by name </option>
+                <option value="byAuthor"> by author </option>
+                <option value="byDesc"> by description </option>
+            </select>
+            <button class="btn btn-primary" ng-click="search(data, opt)">Search </button>
+        </div>
+    </form>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th> Title </th>
+                    <th> Author </th>
+                </tr>
+                <tbody>
+                    <tr ng-repeat="book in books">
+                        <td> <a href="/book-detail/{{book.id}}">  {{book.title}} </a></td>
+                        <td> {{book.author}} </td>
+                        <td> <button  class ="btn btn-primary" ng-click="edit(book)"> edit </button> </td>
+                        <td> <button class="btn" ng-click="delete(book)"> delete </button> </td>
+                    </tr>
+                </tbody>
+        </table>
+    </div>
+    <!--
+    <ul class="list-group">
+        <il  ng-repeat="book in books">
+            <div class="table table-striped">
+                <p> 
+                    <label> title </label>
+                        {{ book.title }}
+            
+                    <label> Author </label>
+                        {{book.author}}
+            
+                    <label> Description </label>
+                        {{book.description}}
+                </p>
+                <button  class ="btn btn-primary" ng-click="edit(book)"> edit </button>
+                <button class="btn" ng-click="delete(book)"> delete </button>
+            </div>
+        </il>
+    </ul>-->
+</div>

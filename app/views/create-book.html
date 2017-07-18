@@ -1,0 +1,30 @@
+<div>
+    <div ng-if="state == 'create'">
+        <h1> ADD NEW BOOK </h1>
+    </div>
+    <div ng-if="state == 'edit'">
+        <h1> EDIT BOOK </h1>
+    </div>
+    
+    <div>
+        <form>
+            <ul>
+                <li>
+                    <label> Title </label>
+                    <input type="text" ng-model="book.title" value="book.title"/>
+                </li>
+                <li>
+                    <label> Author </label>
+                    <input type="text"ng-model="book.author" value="book.author"/>
+                </li>
+                <li>
+                    <label> Sinopses </label>
+                    <input type="text" ng-model="book.description" value="book.description"/>
+                </li>
+            </ul>
+        </form>
+    </div>
+</div>
+
+<button ng-if="state == 'create'" ng-click="addBook(book)" >Submit </button>
+<button ng-if="state == 'edit'" ng-click="save(book)" >Save </button>

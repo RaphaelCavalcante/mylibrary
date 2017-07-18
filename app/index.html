@@ -1,0 +1,51 @@
+<html ng-app="myLibrary">
+    <head>
+        <title> My Library </title>
+        <link rel="stylesheet" href="css/bootstrap.css"/>
+        <link rel="stylesheet" href="css/app.css"/>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="services/lb-services.js"></script>
+
+        <script src="app.module.js"></script>
+        <script src="app.config.js"></script>
+
+        <script src="modules/create-book/create-book.module.js"></script>
+        <script src="modules/create-book/create-book.controller.js"></script>
+        <script src="modules/search-book/search-book.module.js"></script>
+        <script src="modules/search-book/search-book.controller.js"></script>
+        <script src="modules/edit-book/edit-book.module.js"></script>
+        <script src="modules/edit-book/edit-book.controller.js"></script>
+    </head>
+    <body>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li> 
+                        <a href="#!/home"> Home </a>
+                    </li>
+                    <li>
+                        <a href="#!/create-book"> Add book </a>
+                    </li>
+                    <li >
+                        <a href="#!/search-book"> Search book </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <div class="col-xs-12 col-sm-9">
+                    <div ng-view>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    </body>
+
+</html>
